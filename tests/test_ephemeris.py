@@ -25,7 +25,7 @@ def test_health_ok():
 def test_source_offer_is_agpl():
     body = client.get("/source").json()
     assert body["license"].startswith("AGPL")
-    assert "siddhanta-ephemeris" in body["source"]
+    assert "ephemeris-service" in body["source"]
 
 
 def test_positions_match_swisseph_exactly():

@@ -1,9 +1,10 @@
-# siddhanta-ephemeris
+# ephemeris-service
 
-A small, self-hostable HTTP service exposing **sidereal (Vedic) astronomical
-primitives** — planet positions, house cusps, and rise/set times — computed with
-[Swiss Ephemeris](https://www.astro.com/swisseph/). Defaults to **Lahiri
-ayanamsa** and **Whole-Sign houses**. **AGPL-3.0-or-later.**
+A small, self-hostable HTTP service exposing **astronomical primitives** —
+planet positions, house cusps, and rise/set times — computed with
+[Swiss Ephemeris](https://www.astro.com/swisseph/). Supports sidereal
+computation with configurable ayanamsa and house system (defaults: Lahiri,
+Whole-Sign). **AGPL-3.0-or-later.**
 
 ## Why a separate service?
 
@@ -17,7 +18,7 @@ proprietary application can consume ephemeris data **over HTTP without linking
 (which contains no application logic, just standard astronomy) is AGPL:
 
 ```
-  your proprietary app  ──HTTP──▶  siddhanta-ephemeris (AGPL, swisseph)
+  your proprietary app  ──HTTP──▶  ephemeris-service (AGPL, swisseph)
 ```
 
 (Confirm the network-boundary reasoning for your situation with a lawyer; it is

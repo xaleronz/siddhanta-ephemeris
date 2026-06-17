@@ -1,4 +1,4 @@
-# siddhanta-ephemeris — Swiss Ephemeris computation service
+# ephemeris-service — Swiss Ephemeris computation service
 # Copyright (C) 2026 xaleronz
 #
 # This program is free software: you can redistribute it and/or modify it under
@@ -35,7 +35,7 @@ import ephemeris
 
 # AGPL §13: where users obtain the Corresponding Source of the running service.
 SOURCE_URL = os.getenv(
-    "SOURCE_URL", "https://github.com/xaleronz/siddhanta-ephemeris"
+    "SOURCE_URL", "https://github.com/xaleronz/ephemeris-service"
 )
 
 
@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="siddhanta-ephemeris", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="ephemeris-service", version="1.0.0", lifespan=lifespan)
 
 
 def require_key(x_ephemeris_key: Optional[str] = Header(default=None)) -> None:

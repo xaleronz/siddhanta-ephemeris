@@ -1,4 +1,4 @@
-# siddhanta-ephemeris — Swiss Ephemeris computation service
+# ephemeris-service — Swiss Ephemeris computation service
 # Copyright (C) 2026 xaleronz
 #
 # This program is free software: you can redistribute it and/or modify it under
@@ -35,7 +35,7 @@ import swisseph as swe
 # libswe keeps global mode state and is NOT thread-safe — serialise every call.
 _LOCK = threading.Lock()
 
-# Default conventions for sidereal/Vedic computation.
+# Default sidereal conventions (overridable by callers).
 _SID_MODE = swe.SIDM_LAHIRI
 _DEFAULT_HSYS = b"W"  # Whole Sign
 
