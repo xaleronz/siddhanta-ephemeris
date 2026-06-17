@@ -49,10 +49,11 @@ uvicorn main:app --reload
 
 ## Deploy
 
-1. **`curl -L https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE`** — drop in the full AGPL text (the committed `LICENSE` is a placeholder pointer; replace it before publishing).
-2. Publish the source so users of the running service can obtain it, and set `SOURCE_URL` to where it lives (`/source` and the AGPL §13 offer point there). Keep the published source in sync with what you deploy.
-3. Deploy the provided `Dockerfile`. Single worker — libswe is not thread-safe; scale with instances, not threads.
-4. Set `EPHEMERIS_API_KEY` (shared with your caller) and, if you ship `.se1` data files, `EPHE_PATH`.
+1. Source is published under AGPL-3.0 (full text in `LICENSE`); the `/source`
+   endpoint serves the §13 offer (override the repo URL via `SOURCE_URL` if you
+   fork/move it). **Keep the published source in sync with what you deploy.**
+2. Deploy the provided `Dockerfile`. Single worker — libswe is not thread-safe; scale with instances, not threads.
+3. Set `EPHEMERIS_API_KEY` (shared with your caller) and, if you ship `.se1` data files, `EPHE_PATH`.
 
 ## Status
 
